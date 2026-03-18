@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTMUJ Student Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>CTMUJ</h2>
+    <button onclick="showSection('quiz')">📝 Quiz</button>
+    <button onclick="showSection('assignment')">📂 Assignments</button>
+    <button onclick="showSection('announcements')">📢 Announcements</button>
+    <button onclick="showSection('calendar')">📅 Calendar</button>
+    <button onclick="showSection('timetable')">📚 Timetable</button>
+    <button onclick="showSection('chatbot')">🤖 AI Assistant</button>
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <!-- QUIZ -->
+    <div id="quiz" class="section active">
+      <div class="card">
+        <h2>Secure Quiz</h2>
+        <p>What does HTML stand for?</p>
+        <div class="quiz-option">
+          <input type="radio" name="q"> Hyper Text Markup Language
+        </div>
+        <div class="quiz-option">
+          <input type="radio" name="q"> High Transfer Machine Language
+        </div>
+        <div class="quiz-option">
+          <input type="radio" name="q"> Hyper Tool Machine Language
+        </div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <p id="quizResult"></p>
+      </div>
+    </div>
+
+    <!-- ASSIGNMENTS -->
+    <div id="assignment" class="section">
+      <div class="card">
+        <h2>Assignments</h2>
+        <div class="assignment">
+          <span>DBMS Assignment</span>
+          <span>Due: 20 Sept</span>
+        </div>
+        <div class="assignment">
+          <span>DSA Assignment</span>
+          <span>Due: 25 Sept</span>
+        </div>
+        <input type="file">
+        <button onclick="submitAssignment()">Upload</button>
+        <p id="assignMsg"></p>
+      </div>
+    </div>
+
+    <!-- ANNOUNCEMENTS -->
+    <div id="announcements" class="section">
+      <div class="announcement">
+        <h3>🚀 Hackathon</h3>
+        <p>MUJ Hackathon registrations open!</p>
+      </div>
+      <div class="announcement">
+        <h3>💼 Internship</h3>
+        <p>Google Summer Internship applications live.</p>
+      </div>
+      <div class="announcement">
+        <h3>🎓 Scholarship</h3>
+        <p>New merit scholarship available for CS students.</p>
+      </div>
+    </div>
+
+    <!-- CALENDAR -->
+    <div id="calendar" class="section">
+      <div class="card">
+        <h2>Academic Calendar</h2>
+        <div class="calendar-grid">
+          <div class="event">
+            <h3>Semester Start</h3>
+            <p>15 July</p>
+          </div>
+          <div class="event">
+            <h3>Mid Sem Exams</h3>
+            <p>10 Sept</p>
+          </div>
+          <div class="event">
+            <h3>Hackathon</h3>
+            <p>20 Sept</p>
+          </div>
+          <div class="event">
+            <h3>Final Exams</h3>
+            <p>10 Dec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMETABLE -->
+    <div id="timetable" class="section">
+      <div class="card">
+        <h2>Weekly Timetable</h2>
+        <div class="timetable">
+          <div class="classCard">
+            <h3>Monday</h3>
+            <p>DBMS</p>
+            <p>Dr. Sharma</p>
+            <p>9:00 AM</p>
+          </div>
+          <div class="classCard">
+            <h3>Tuesday</h3>
+            <p>Data Structures</p>
+            <p>Prof. Gupta</p>
+            <p>11:00 AM</p>
+          </div>
+          <div class="classCard">
+            <h3>Wednesday</h3>
+            <p>Operating Systems</p>
+            <p>Dr. Mehta</p>
+            <p>10:00 AM</p>
+          </div>
+          <div class="classCard">
+            <h3>Thursday</h3>
+            <p>Computer Networks</p>
+            <p>Dr. Verma</p>
+            <p>12:00 PM</p>
+          </div>
+          <div class="classCard">
+            <h3>Friday</h3>
+            <p>AI Fundamentals</p>
+            <p>Dr. Singh</p>
+            <p>2:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <div id="chatbot" class="section">
+      <div class="card">
+        <h2>CTMUJ AI Assistant</h2>
+        <div id="chatbox">
+          <div><b>Bot:</b> Hello 👋 How may I help you?</div>
+        </div>
+        <input id="userInput" placeholder="Ask something...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

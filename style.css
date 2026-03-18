@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+/* Animated Background */
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff4d6d, #00c9a7);
+  background-size: 400% 400%;
+  animation: bg 12s ease infinite;
+  display: flex;
+  color: white;
+}
+
+@keyframes bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Glass Cards */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Sections */
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* Quiz */
+.quiz-option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.quiz-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Assignment */
+.assignment {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Announcements */
+.announcement {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Calendar */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.event {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Timetable */
+.timetable {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.classCard {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.classCard:hover {
+  transform: scale(1.05);
+}
+
+/* Chatbot */
+#chatbox {
+  height: 250px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input, button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Dark Mode */
+.dark {
+  background: #0e0e0e;
+}
+
+.dark .card {
+  background: #1e1e1e;
+}
